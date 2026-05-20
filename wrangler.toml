@@ -90,7 +90,7 @@ run_worker_first = ["/api/*", "/identity/*", "/notifications/*"]
 # ATTACHMENT_TOTAL_LIMIT_KB = "1048576"  # 1GB
 
 # Number of seconds to keep attachment upload and download URLs valid.
-# Defaults to 300 seconds (5 minutes) if not set.
+# Defaults to 300 秒之前 (5 分钟之前) if not set.
 # ATTACHMENT_TTL_SECS = "300"
 
 # Cron triggers for scheduled tasks
@@ -153,8 +153,8 @@ migrations_dir = "migrations"
 # bucket_name = "warden-attachments-dev"
 
 # KV namespace for file attachments in dev environment (optional, no credit card required)
-[[env.dev.kv_namespaces]]
-binding = "ATTACHMENTS_KV"
+#[[env.dev.kv_namespaces]]
+#binding = "ATTACHMENTS_KV"
 
 # logs
 [env.dev.observability]
