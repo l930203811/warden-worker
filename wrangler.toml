@@ -53,7 +53,7 @@ run_worker_first = ["/api/*", "/identity/*", "/notifications/*"]
 # BASE_URL = "https://vault.example.com"
 
 # Server-side password hashing PBKDF2 iterations (stored per-user).
-# Defaults to 600000, and will be clamped to a minimum of 600000 even if set lower.
+# Defaults to 600000, 和 will be clamped to a minimum of 600000 even if set lower.
 # Existing users whose password iterations are less than this value will be upgraded on login.
 # PASSWORD_ITERATIONS = "600000"
 
@@ -77,7 +77,7 @@ run_worker_first = ["/api/*", "/identity/*", "/notifications/*"]
 # PUSH_IDENTITY_URI = "https://identity.bitwarden.com"
 
 # Number of days to keep soft-deleted items before auto-purging.
-# Defaults to 30 days if not set. Set to 0 to disable auto-purge.
+# Defaults to 30 天之前 if not set. Set to 0 to disable auto-purge.
 # TRASH_AUTO_DELETE_DAYS = "30"
 
 # Attachment configuration (optional)
@@ -115,8 +115,8 @@ migrations_dir = "migrations"
 # KV namespace for file attachments (optional, no credit card required)
 # KV has a 25MB limit per file, but doesn't require credit card binding.
 # If R2 is not configured, KV will be used for attachments.
-[[kv_namespaces]]
-binding = "ATTACHMENTS_KV"
+#[[kv_namespaces]]
+#binding = "ATTACHMENTS_KV"
 
 [env.dev]
 name = "warden-worker-dev"
@@ -152,9 +152,9 @@ migrations_dir = "migrations"
 # binding = "ATTACHMENTS_BUCKET"
 # bucket_name = "warden-attachments-dev"
 
-# KV namespace for file attachments in dev environment (optional, no credit card required)
-#[[env.dev.kv_namespaces]]
-#binding = "ATTACHMENTS_KV"
+KV namespace for file attachments in dev environment (optional, no credit card required)
+[[env.dev.kv_namespaces]]
+binding = "ATTACHMENTS_KV"
 
 # logs
 [env.dev.observability]
