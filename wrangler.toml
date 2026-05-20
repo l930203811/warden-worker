@@ -151,7 +151,7 @@ migrations_dir = "migrations"
 # [[env.dev.r2_buckets]]
 # binding = "ATTACHMENTS_BUCKET"
 # bucket_name = "warden-attachments-dev"
-KV namespace for file attachments in dev environment (optional, no credit card required)
+# KV namespace for file attachments in dev environment (optional, no credit card required)
 [[env.dev.kv_namespaces]]
 binding = "ATTACHMENTS_KV"
 id = "8daa395cb2af4ca0958805fa240137b1"
