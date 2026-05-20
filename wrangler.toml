@@ -124,6 +124,7 @@ workers_dev = true
 preview_urls = true
 
 [env.dev.vars]
+DISABLE_USER_REGISTRATION = "false"
 
 [env.dev.durable_objects]
 bindings = [
